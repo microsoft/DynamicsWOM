@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="10dp">
+
+    <Button
+        android:id="@+id/button"
+        style="@style/list_button_style"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="@string/debug_step_number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debug_work_order_title"
+            android:textColor="@color/black_text_color"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="21sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-4dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_text_color"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:text="@string/guide_status"
+                />
+
+            <TextView
+                android:id="@+id/workOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:maxWidth="200dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black_text_color"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:text="@string/guide_work_order"
+                />
+
+            <TextView
+                android:id="@+id/endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/black_text_color"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:text="@string/guide_end_time"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

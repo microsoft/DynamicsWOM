@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.NotesListFragment"
+    android:background="@drawable/background_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bottomBarHeight">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="83dp" />
+
+            <Button
+                android:id="@+id/changeStatusButton"
+                style="@style/round_white_button"
+                android:text="@string/change_status"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="50dp" />
+
+        </FrameLayout>
+
+        <com.ttpsc.dynamics365fieldService.views.components.TabBarView
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp" >
+
+            <TextView
+                android:id="@+id/selectNoteButton"
+                style="@style/round_button"
+                android:text="SELECT NOTE 1-3" />
+
+            <TextView
+                android:id="@+id/openAttachmentButton"
+                style="@style/round_button"
+                android:layout_marginStart="190dp"
+                android:text="SHOW ATTACHMENT 10-12" />
+
+            <Button
+                android:id="@+id/addNoteButton"
+                style="@style/round_button_middle"
+                android:layout_width="107dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/rounded_45"
+                android:contentDescription="@string/add_note_command"
+                android:text="@string/add_note_uppercase" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notesList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/notes_list_item" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <Button
+                android:id="@+id/previousPageButton"
+                style="@style/round_button_left"
+                android:layout_width="150dp"
+                android:contentDescription="@string/previous_page_command"
+                android:text="@string/previous_page" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/nextPageButton"
+                style="@style/round_button_right"
+                android:layout_width="150dp"
+                android:contentDescription="@string/next_page_command"
+                android:text="@string/next_page" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ttpsc.dynamics365fieldService.views.components.BottomBarView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.ttpsc.dynamics365fieldService.views.components.AddNoteView
+        android:id="@+id/addNoteView"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+
+

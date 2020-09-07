@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="loginPanelHorizontalPadding">30dp</dimen>
+    <dimen name="loginPanelVerticalPadding">30dp</dimen>
+    <dimen name="validationPanelHorizontalPadding">10dp</dimen>
+    <dimen name="validationPanelVerticalPadding">10dp</dimen>
+
+    <dimen name="topBarHeight">83dp</dimen>
+    <dimen name="bottomBarHeight">44dp</dimen>
+</resources>

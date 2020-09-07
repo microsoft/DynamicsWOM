@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CategoryItemView">
+        <attr name="categoryText" format="string" />
+        <attr name="categoryDrawable" format="integer" />
+        <attr name="categoryNumber" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TopBarView">
+        <attr name="topBarTitle" format="string" />
+    </declare-styleable>
+</resources>

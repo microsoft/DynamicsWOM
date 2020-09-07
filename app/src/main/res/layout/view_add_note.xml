@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titleBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0222222"
+    android:orientation="horizontal"
+    android:paddingStart="45dp"
+    android:paddingEnd="45dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="45dp"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginVertical="25dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/add_note"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/confirmNoteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:text="@string/confirm_note"
+                    android:contentDescription="@string/confirm_note_command"
+                    android:textSize="21sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@color/black" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/add_note_media_information"
+                android:textSize="21sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#DADADA" />
+                        <FrameLayout
+                            android:id="@+id/addedCommentView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/green_button_marker"
+                            android:visibility="invisible">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_check_mark_white" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/addCommentButton"
+                        style="@style/round_button_middle"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/rounded_45"
+                        android:contentDescription="@string/add_comment_command"
+                        android:enabled="true"
+                        android:text="@string/add_comment" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#DADADA" />
+                        <FrameLayout
+                            android:id="@+id/addedPhotoView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/green_button_marker"
+                            android:visibility="invisible">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_check_mark_white" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/addPhotoButton"
+                        style="@style/round_button_middle"
+                        android:layout_width="120dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/rounded_45"
+                        android:contentDescription="@string/add_photo_command"
+                        android:enabled="true"
+                        android:text="@string/add_photo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/divider_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="@string/or"
+                        android:textAllCaps="true"
+                        android:textColor="@color/divider_color"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/divider_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#DADADA" />
+                        <FrameLayout
+                            android:id="@+id/addedVideoView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/green_button_marker"
+                            android:visibility="invisible">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_check_mark_white" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/addVideoButton"
+                        style="@style/round_button_middle"
+                        android:layout_width="120dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/rounded_45"
+                        android:contentDescription="@string/add_video_command"
+                        android:enabled="true"
+                        android:text="@string/add_video" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/cancelAddingNotesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right|bottom"
+                    android:gravity="center_vertical"
+                    android:text="@string/cancel"
+                    android:clickable="true"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

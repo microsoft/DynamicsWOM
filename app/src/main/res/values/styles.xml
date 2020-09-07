@@ -1,0 +1,206 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="default_button_style">
+        <item name="android:layout_width">212dp</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/default_button_text_color</item>
+        <item name="android:textSize">22dp</item>
+    </style>
+
+    <style name="top_bar_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/top_bar_text_color</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="top_bar_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">33dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/default_button_text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="bottom_bar_text_1_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/bottom_bar_text_color</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="bottom_bar_text_2_style" parent="bottom_bar_text_1_style">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="list_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/normal_list_button_background</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="transparent_button_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingStart">55dp</item>
+        <item name="android:paddingEnd">55dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="transparent_button_style_clipped" parent="transparent_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+    <style name="guide_info_labels_style">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Tab bar styles -->
+
+    <style name="tab_bar_item_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/tab_bar_background_selected</item>
+    </style>
+
+    <style name="tab_bar_item_style_button" parent="tab_bar_item_style">
+        <item name="android:background">@drawable/button_medium_blue</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="tab_bar_image_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="tab_bar_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- GuideDetailsFragment -->
+    <style name="guide_detail">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="guide_details_ceil" parent="guide_detail">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+    <style name="guide_details_ceil_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="guide_details_ceil_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="round_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:background">@drawable/rounded_45</item>
+        <item name="android:backgroundTint">@color/button_dark_blue</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">@color/default_button_text_color</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="round_button_left" parent="round_button">
+        <item name="android:background">@drawable/left_rounded_45</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="round_button_middle" parent="round_button">
+        <item name="android:background">@color/button_dark_blue</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="round_button_right" parent="round_button">
+        <item name="android:background">@drawable/right_rounded_45</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="round_white_button" parent="round_button">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/top_bar_color</item>
+    </style>
+
+</resources>

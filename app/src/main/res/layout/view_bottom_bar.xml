@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <FrameLayout
+        android:id="@+id/topBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            app:topBarTitle="@string/more_options" />
+
+        <Button
+            android:id="@+id/moreOptionsCloseButton"
+            style="@style/round_white_button"
+            android:text="@string/more_options_close"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="56dp" />
+
+    </FrameLayout>
+    
+    <LinearLayout
+        android:id="@+id/moreOptions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient"
+        android:gravity="center_vertical"
+        android:paddingLeft="50dp"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/goToWorkOrdersButton"
+            style="@style/transparent_button_style_clipped"
+            android:text="@string/more_options_go_to_work_orders"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/goToIconicsButton"
+            style="@style/transparent_button_style_clipped"
+            android:text="@string/more_options_go_to_iconics"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/goToMainMenuButton"
+            style="@style/transparent_button_style_clipped"
+            android:text="@string/more_options_go_to_main_menu"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottomBarHeight"
+        android:paddingBottom="8dp"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            style="@style/round_button"
+            android:id="@+id/moreOptionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:clickable="true"
+            android:contentDescription="More options"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More options"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:src="@drawable/ic_more_options"
+                android:tint="@color/white"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                style="@style/bottom_bar_text_1_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bottom_bar_text_1"
+                />
+
+            <TextView
+                style="@style/bottom_bar_text_2_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bottom_bar_text_2"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

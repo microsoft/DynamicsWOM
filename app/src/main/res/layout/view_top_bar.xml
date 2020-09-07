@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titleBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topBarHeight"
+    android:background="@color/top_bar_color"
+    android:orientation="horizontal"
+    android:paddingStart="45dp"
+    android:paddingEnd="45dp" >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/company_logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/top_bar_image"/>
+
+    <TextView
+        android:id="@+id/viewTitle"
+        style="@style/top_bar_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/title_bar_text"
+        android:gravity="center_vertical"
+        tools:text="Top bar title"
+        android:maxWidth="500dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+</LinearLayout>

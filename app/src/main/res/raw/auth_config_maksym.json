@@ -1,0 +1,11 @@
+{
+  "client_id" : "9ff23ef8-d807-4bce-8dd2-e8583f55cd56",
+  "authorization_user_agent" : "WEBVIEW",
+  "redirect_uri" : "msauth://com.ttpsc.dynamics365fieldService/Bmce%2B9aHdOoVtE7fS3B07tfj7Bc%3D",
+  "account_mode" : "SINGLE",
+  "authorities" : [
+    {
+      "type": "AAD",
+      "authority_url": "https://login.microsoftonline.com/organizations"
+    }]
+}

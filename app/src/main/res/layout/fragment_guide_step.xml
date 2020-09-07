@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:textAlignment="center"
+    tools:context=".views.GuideStepFragment">
+
+    <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+        android:id="@+id/titleBar"
+        android:layout_width="856dp"
+        android:layout_height="83dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/finishButton"
+            style="@style/top_bar_button_style"
+            android:layout_width="131dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="55dp"
+            android:text="@string/finish_button_text"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.66"
+            tools:layout_editor_absoluteX="670dp" />
+    </com.ttpsc.dynamics365fieldService.views.components.TopBarView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="283dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_bias="0.25">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/descriptionLinesList"
+            android:layout_width="480dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="55dp"
+            app:layout_constraintBottom_toBottomOf="@+id/stepImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/stepImage"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/step_description_item_layout" />
+
+        <ImageView
+            android:id="@+id/stepImage"
+            android:layout_width="253dp"
+            android:layout_height="253dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rounded_15"
+            android:contentDescription="@string/image_preview_content_description"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toEndOf="@+id/descriptionLinesList"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.266" />
+
+        <Button
+            android:id="@+id/openAttachmentButton"
+            style="@style/default_button_style"
+            android:layout_width="92dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rounded_25"
+            android:backgroundTint="@color/default_red_color"
+            android:elevation="5dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/open_attachment_button_text"
+            android:textColor="@color/default_button_text_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/stepImage"
+            app:layout_constraintEnd_toEndOf="@+id/stepImage"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/stepImage"
+            app:layout_constraintTop_toTopOf="@+id/stepImage"
+            app:layout_constraintVertical_bias="0.96" />
+
+        <ImageButton
+            android:id="@+id/previousPageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_25"
+            android:backgroundTint="@color/default_red_color"
+            android:contentDescription="@string/previous_page_command"
+            android:rotation="-90"
+            android:src="@drawable/single_arrow"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/descriptionLinesList"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/descriptionLinesList" />
+
+        <ImageButton
+            android:id="@+id/nextPageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_25"
+            android:backgroundTint="@color/default_red_color"
+            android:contentDescription="@string/next_page_command"
+            android:rotation="90"
+            android:src="@drawable/single_arrow"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/previousPageButton"
+            app:layout_constraintStart_toStartOf="@+id/previousPageButton"
+            app:layout_constraintTop_toBottomOf="@+id/previousPageButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <Button
+            android:id="@+id/previousStepButton"
+            style="@style/transparent_button_style"
+            android:layout_width="149dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/left_rounded_45"
+            android:fontFamily="@font/roboto"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/previous_step_button_text"
+            android:textAlignment="center"
+            android:textColor="@color/default_button_text_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/stepsListButton"
+            app:layout_constraintEnd_toStartOf="@+id/stepsListButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/stepsListButton"
+            style="@style/transparent_button_style"
+            android:layout_width="131dp"
+            android:layout_height="25dp"
+            android:background="@color/default_red_color"
+            android:fontFamily="@font/roboto"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/steps_list_button_text"
+            android:textAlignment="center"
+            android:textColor="@color/default_button_text_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/previousStepButton" />
+
+        <Button
+            android:id="@+id/nextStepButton"
+            style="@style/transparent_button_style"
+            android:layout_width="149dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/right_rounded_45"
+            android:fontFamily="@font/roboto"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/next_step_button_text"
+            android:textAlignment="center"
+            android:textColor="@color/default_button_text_color"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/stepsListButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/stepsListButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="data"
+            type="com.ttpsc.dynamics365fieldService.views.activities.RecordingActivity" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="hf_hide_help"
+        android:background="@color/black">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="70dp">
+
+            <Button
+                android:id="@+id/startRecordingButton"
+                style="@style/round_button_left"
+                android:visibility="@{data.recording ? View.GONE : View.VISIBLE}"
+                android:text="Record video" />
+
+            <Button
+                android:id="@+id/stopRecordingButton"
+                style="@style/round_button_left"
+                android:visibility="@{data.recording ? View.VISIBLE : View.GONE}"
+                android:text="Stop Recording" />
+
+            <TextView
+                style="@style/round_button_right"
+                android:layout_marginLeft="6dp"
+                android:text="@string/navigate_back" />
+
+        </LinearLayout>
+
+        <Chronometer
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:text="00:00"
+            android:format12Hour="hh:mm:ss a"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+    </FrameLayout>
+</layout>

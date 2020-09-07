@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.GuideSummaryFragment"
+    android:background="@drawable/background_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bottomBarHeight">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="83dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/changeStatusButton"
+                    style="@style/round_white_button"
+                    android:text="@string/change_status" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <com.ttpsc.dynamics365fieldService.views.components.TabBarView
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="3"
+                android:padding="30dp">
+
+                <TextView
+                    style="@style/guide_details_ceil_header"
+                    android:layout_columnSpan="3"
+                    android:text="@string/description"
+                    />
+
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/guide_details_ceil_value"
+                    android:layout_columnSpan="3"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30dp"
+                    />
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/status"
+                        />
+                    <TextView
+                        android:id="@+id/status"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/start_time"
+                        />
+                    <TextView
+                        android:id="@+id/startTime"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/end_time"
+                        />
+                    <TextView
+                        android:id="@+id/endTime"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/guide_details_ceil_header"
+                    android:layout_columnSpan="3"
+                    android:text="@string/address"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/street_1"
+                        />
+                    <TextView
+                        android:id="@+id/street1"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/street_2"
+                        />
+                    <TextView
+                        android:id="@+id/street2"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/street_3"
+                        />
+                    <TextView
+                        android:id="@+id/street3"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/city"
+                        />
+                    <TextView
+                        android:id="@+id/city"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/state_or_province"
+                        />
+                    <TextView
+                        android:id="@+id/stateOrProvince"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/postal_code"
+                        />
+                    <TextView
+                        android:id="@+id/postalCode"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/country_region"
+                        />
+                    <TextView
+                        android:id="@+id/countryRegion"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/guide_details_ceil">
+                    <TextView
+                        style="@style/guide_details_ceil_header"
+                        android:text="@string/service_territory"
+                        />
+                    <TextView
+                        android:id="@+id/serviceTerritory"
+                        style="@style/guide_details_ceil_value"
+                        />
+                </LinearLayout>
+
+            </GridLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/pageUpButton"
+                android:layout_width="150dp"
+                style="@style/round_button_left"
+                android:text="@string/page_up"
+                android:enabled="false"
+                android:contentDescription="hf_use_description"
+                />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/pageDownButton"
+                style="@style/round_button_right"
+                android:layout_width="150dp"
+                android:text="@string/page_down"
+                android:enabled="false"
+                android:contentDescription="hf_use_description" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ttpsc.dynamics365fieldService.views.components.BottomBarView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

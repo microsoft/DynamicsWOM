@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".views.NoteDetailsFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+>
+
+    <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+    android:id="@+id/titleBar"
+    android:layout_width="match_parent"
+    android:layout_height="83dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:topBarTitle="@string/note_details_title" >
+
+        <Button
+            android:id="@+id/showAttachmentButton"
+            style="@style/round_white_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_attachment_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.918"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.491" />
+    </com.ttpsc.dynamics365fieldService.views.components.TopBarView>
+
+    <TextView
+        android:id="@+id/ownerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/owner"
+        android:textColor="@color/black_text_color"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ownerValueTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ownerValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toEndOf="@+id/ownerLabel"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/date_label"
+        android:textColor="@color/black_text_color"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateValueTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dateValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:textSize="18dp"
+        android:textColor="@color/black_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/dateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/ownerValueTextView" />
+
+    <TextView
+        android:id="@+id/noteContentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="52dp"
+        android:textSize="24sp"
+        android:textColor="@color/black_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateValueTextView" />
+
+
+    <include
+        layout="@layout/view_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteContentTextView"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

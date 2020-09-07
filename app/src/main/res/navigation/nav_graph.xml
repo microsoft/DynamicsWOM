@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.ttpsc.dynamics365fieldService.views.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_startFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_startFragment_to_guideSummaryGraph"
+            app:destination="@id/guideSummaryGraph"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="bookableResourceBookingId"
+                app:argType="string"
+                app:nullable="true"/>
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure"
+                app:nullable="true"/>
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.BookingStatus[]"
+                app:nullable="true"/>
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ttpsc.dynamics365fieldService.views.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_login">
+        <argument
+            android:name="bookableResourceBookingId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_guideSummaryGraph"
+            app:destination="@id/guideSummaryGraph"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="bookableResourceBookingId"
+                app:argType="string"
+                app:nullable="true"/>
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure"
+                app:nullable="true"/>
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.BookingStatus[]"
+                app:nullable="true"/>
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.ttpsc.dynamics365fieldService.views.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_guidesListFragment"
+            app:destination="@id/guidesListFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/mainMenuFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/guidesListFragment"
+        android:name="com.ttpsc.dynamics365fieldService.views.GuidesListFragment"
+        android:label="fragment_guides_list"
+        tools:layout="@layout/fragment_guides_list">
+        <action
+            android:id="@+id/action_guidesListFragment_to_guideSummaryGraph"
+            app:destination="@id/guideSummaryGraph">
+            <argument
+                android:name="bookableResourceBookingId"
+                app:argType="string"
+                app:nullable="true" />
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure"
+                app:nullable="true"/>
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure"
+                app:nullable="true"/>
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+
+    <navigation
+        android:id="@+id/guideSummaryGraph"
+        app:startDestination="@id/guideSummaryFragment">
+        <fragment
+            android:id="@+id/guideSummaryFragment"
+            android:name="com.ttpsc.dynamics365fieldService.views.GuideSummaryFragment"
+            android:label="fragment_guide_summary"
+            tools:layout="@layout/fragment_guide_summary">
+            <argument
+                android:name="bookableResourceBookingId"
+                app:argType="string"
+                app:nullable="true"
+                android:defaultValue="@null"/>
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure"
+                app:nullable="true"/>
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.BookingStatus[]"
+                app:nullable="true"/>
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true" />
+
+            <action
+                android:id="@+id/action_guideSummaryFragment_to_guidesListFragment"
+                app:destination="@id/guidesListFragment"
+                app:popUpTo="@id/guidesListFragment"
+                app:popUpToInclusive="true"/>
+            <action
+                android:id="@+id/action_guideSummaryFragment_to_mainMenuFragment"
+                app:destination="@id/mainMenuFragment"
+                app:popUpTo="@id/mainMenuFragment"
+                app:popUpToInclusive="true"/>
+
+            <action
+                android:id="@+id/action_guideSummaryFragment_to_guideDetailsFragment"
+                app:destination="@id/guideDetailsFragment"
+                app:popUpTo="@id/guideSummaryFragment"
+                app:popUpToInclusive="true"/>
+            <action
+                android:id="@+id/action_guideSummaryFragment_to_guideDetailsAttachmentsFragment"
+                app:destination="@id/guideDetailsAttachmentsFragment"
+                app:popUpTo="@id/guideSummaryFragment"
+                app:popUpToInclusive="true"/>
+            <action
+                android:id="@+id/action_guideSummaryFragment_to_notesListFragment"
+                app:destination="@id/notesListFragment"
+                app:popUpTo="@id/guideSummaryFragment"
+                app:popUpToInclusive="true"/>
+        </fragment>
+        <fragment
+            android:id="@+id/guideDetailsFragment"
+            android:name="com.ttpsc.dynamics365fieldService.views.GuideDetailsFragment"
+            android:label="fragment_guide_details"
+            tools:layout="@layout/fragment_guide_details">
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure" />
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.BookingStatus[]" />
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true"/>
+
+            <action
+                android:id="@+id/action_guideDetailsFragment_to_guidesListFragment"
+                app:destination="@id/guidesListFragment"
+                app:popUpTo="@id/guidesListFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_guideDetailsFragment_to_mainMenuFragment"
+                app:destination="@id/mainMenuFragment"
+                app:popUpTo="@id/mainMenuFragment"
+                app:popUpToInclusive="true"/>
+
+            <action
+                android:id="@+id/action_guideDetailsFragment_to_guideSummaryFragment"
+                app:destination="@id/guideSummaryFragment"
+                app:popUpTo="@id/guideDetailsFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_guideDetailsFragment_to_guideDetailsAttachmentsFragment"
+                app:destination="@id/guideDetailsAttachmentsFragment"
+                app:popUpTo="@id/guideDetailsFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_guideDetailsFragment_to_notesListFragment"
+                app:destination="@id/notesListFragment"
+                app:popUpTo="@id/guideDetailsFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/guideDetailsAttachmentsFragment"
+            android:name="com.ttpsc.dynamics365fieldService.views.GuideDetailsAttachmentsFragment"
+            android:label="fragment_guide_details_attachments"
+            tools:layout="@layout/fragment_guide_details_attachments" >
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure" />
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.BookingStatus[]" />
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true"/>
+
+            <action
+                android:id="@+id/action_guideDetailsAttachmentsFragment_to_guidesListFragment"
+                app:destination="@id/guidesListFragment"
+                app:popUpTo="@id/guidesListFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_guideDetailsAttachmentsFragment_to_mainMenuFragment"
+                app:destination="@id/mainMenuFragment"
+                app:popUpTo="@id/mainMenuFragment"
+                app:popUpToInclusive="true"/>
+
+            <action
+                android:id="@+id/action_guideDetailsAttachmentsFragment_to_guideSummaryFragment"
+                app:destination="@id/guideSummaryFragment"
+                app:popUpTo="@id/guideDetailsAttachmentsFragment"
+                app:popUpToInclusive="true">
+            </action>
+            <action
+                android:id="@+id/action_guideDetailsAttachmentsFragment_to_guideDetailsFragment"
+                app:destination="@id/guideDetailsFragment"
+                app:popUpTo="@id/guideDetailsAttachmentsFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_guideDetailsAttachmentsFragment_to_notesListFragment"
+                app:destination="@id/notesListFragment"
+                app:popUpTo="@id/guideDetailsAttachmentsFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/notesListFragment"
+            android:name="com.ttpsc.dynamics365fieldService.views.NotesListFragment"
+            android:label="fragment_guide_details_notes"
+            tools:layout="@layout/fragment_guide_details_notes">
+            <argument
+                android:name="bookableResourceBooking"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Procedure" />
+            <argument
+                android:name="bookingStatuses"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.BookingStatus[]" />
+            <argument
+                android:name="refreshWorkOrdersCallback"
+                app:argType="com.ttpsc.dynamics365fieldService.helpers.RefreshWorkOrdersCallback"
+                app:nullable="true" />
+            <argument
+                android:name="notesArray"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note[]"
+                app:nullable="true"/>
+
+            <action
+                android:id="@+id/action_notesListFragment_to_guidesListFragment"
+                app:destination="@id/guidesListFragment"
+                app:popUpTo="@id/guidesListFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_notesListFragment_to_mainMenuFragment"
+                app:destination="@id/mainMenuFragment"
+                app:popUpTo="@id/mainMenuFragment"
+                app:popUpToInclusive="true"/>
+
+            <action
+                android:id="@+id/action_notesListFragment_to_guideSummaryFragment"
+                app:destination="@id/guideSummaryFragment"
+                app:popUpTo="@id/notesListFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_notesListFragment_to_guideDetailsFragment"
+                app:destination="@id/guideDetailsFragment"
+                app:popUpTo="@id/notesListFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_notesListFragment_to_guideDetailsAttachmentsFragment"
+                app:destination="@id/guideDetailsAttachmentsFragment"
+                app:popUpTo="@id/notesListFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_notesListFragment_to_noteDetailsFragment"
+                app:destination="@id/noteDetailsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/noteDetailsFragment"
+            android:name="com.ttpsc.dynamics365fieldService.views.NoteDetailsFragment"
+            android:label="NoteDetailsFragment" >
+            <argument
+                android:name="note"
+                app:argType="com.ttpsc.dynamics365fieldService.bll.models.Note" />
+        </fragment>
+
+    </navigation>
+
+</navigation>

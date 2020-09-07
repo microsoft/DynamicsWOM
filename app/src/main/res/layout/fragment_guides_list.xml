@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.GuidesListFragment"
+    android:background="@drawable/background_gradient">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bottomBarHeight">
+    
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                app:topBarTitle="@string/guides_list_title" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sortButton"
+                    style="@style/round_white_button"
+                    android:text="@string/sort"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/selectBookingTextView"
+                    style="@style/round_white_button"
+                    android:text="@string/select_guide"
+                    android:layout_marginLeft="30dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/guidesList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="56dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/guides_list_item" />
+
+            <LinearLayout
+                android:id="@+id/refreshPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/no_work_orders" />
+
+                <Button
+                    android:id="@+id/refreshButton"
+                    style="@style/round_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/reload"
+                    android:contentDescription="@string/reload_command"
+                    />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/previousPageButton"
+                android:layout_width="150dp"
+                style="@style/round_button_left"
+                android:text="@string/previous_page"
+                android:contentDescription="@string/previous_page_command"
+                android:enabled="false" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/nextPageButton"
+                android:layout_width="150dp"
+                style="@style/round_button_right"
+                android:text="@string/next_page"
+                android:contentDescription="@string/next_page_command"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_bottom_bar" />
+
+</FrameLayout>

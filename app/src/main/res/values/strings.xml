@@ -1,0 +1,207 @@
+<resources>
+    <string name="company_logo">Company logo</string>
+    <string name="app_name">Field Service</string>
+
+    <string name="title_bar_text">Microsoft Dynamics 365 Field Service</string>
+    <string name="bottom_bar_text_1">Powered by Transition Technologies PSC</string>
+    <string name="bottom_bar_text_2">www.ttpsc.com</string>
+
+    <!-- Main  menu -->
+    <string name="main_menu_bookings_button">Go to work orders</string>
+    <string name="main_menu_open_teams_button">Open Teams</string>
+    <string name="main_menu_open_iconics_button">Open ICONICS</string>
+    <string name="main_menu_logout_button">Logout</string>
+    <string name="version">Version: %s</string>
+
+    <!-- Login -->
+    <string name="incorrect_qr_code_title">Incorrect QR code</string>
+    <string name="incorrect_qr_code_error">This QR Code is incorrect. Please use valid one.</string>
+
+    <!-- Guide steps -->
+    <!-- Guides -->
+    <string name="guides_list_title">Work Orders</string>
+    <string name="guide_status">Status:  \u003Cb\u003E%s\u003Cb\u003E</string>
+    <string name="no_work_orders">No work orders assigned to you</string>
+    <string name="reload">Reload</string>
+    <string name="guide_work_order">Work Order:  %s</string>
+    <string name="guide_end_time">End Time:  %s</string>
+    <string name="select_booking_command">"hf_commands:Select booking %d"</string>
+    <string name="previous_page">Previous page</string>
+    <string name="next_page">Next page</string>
+    <string name="sort">Sort</string>
+    <string name="select_guide">Select booking %d</string>
+    <string name="select_guide_multiple">Select booking %d-%d</string>
+    <string name="choose_sort_column">Choose sort column</string>
+    <string name="sort_work_orders">Sort Work Orders by:</string>
+    <string name="cancel">Cancel</string>
+    <string name="bookings_list_title">My Bookings</string>
+    <string name="work_order_number">Number: %s</string>
+    <string name="work_order_severity">Severity: %s</string>
+    <string name="no_work_order_attached">&lt;no work order attached&gt;</string>
+
+    <!-- TabBar -->
+    <string name="guides_tab_summary">Summary</string>
+    <string name="guides_tab_summary_content_description">hf_commands:summary</string>
+    <string name="guides_tab_details">Details</string>
+    <string name="guides_tab_details_content_description">hf_commands:details</string>
+    <string name="guides_tab_attachments">Attachments</string>
+    <string name="guides_tab_attachments_count">Attachments (%d)</string>
+    <string name="guides_tab_attachments_content_description">hf_commands:attachments</string>
+    <string name="guides_tab_notes">Notes</string>
+    <string name="guides_tab_notes_count">Notes (%d)</string>
+    <string name="guides_tab_notes_content_description">hf_commands:notes</string>
+
+    <!-- Guide -->
+    <string name="go_to_work_orders">Go to work orders</string>
+    <string name="change_status">Change status</string>
+
+    <!-- Guide Summary -->
+    <string name="description">Description</string>
+    <string name="start_time">Start Time</string>
+    <string name="address">Address</string>
+    <string name="street_1">Street 1</string>
+    <string name="street_2">Street 2</string>
+    <string name="street_3">Street 3</string>
+    <string name="city">City</string>
+    <string name="state_or_province">State or Province</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="country_region">Country/Region</string>
+    <string name="service_territory">Service Territory</string>
+    <string name="page_down">Page down</string>
+    <string name="page_up">Page up</string>
+    <string name="page_down_command">hf_commands:Page down</string>
+    <string name="page_up_command">hf_commands:Page up</string>
+
+    <string name="wrong_work_order">Wrong Work Order</string>
+    <string name="cant_receive_work_order">Work Order %s cannot be received form the server</string>
+    <string name="cant_open_booking_no_work_order">Cannot open booking %d because it has no work order attached</string>
+
+    <!-- Guide step -->
+    <string name="previous_step_button_text">PREVIOUS STEP</string>
+    <string name="next_step_button_text">NEXT STEP</string>
+    <string name="steps_list_button_text">STEPS LIST</string>
+    <string name="image_preview_content_description">Attachment preview</string>
+
+    <string name="finish_button_text">FINISH</string>
+    <string name="steps_count_label">steps</string>
+    <string name="guide_level_label">level</string>
+    <string name="guide_time_label">minutes</string>
+    <string name="start_guide_button_text">Start</string>
+    <string name="steps_count_icon">Steps count icon</string>
+    <string name="guide_level_icon">Guide level icon</string>
+    <string name="guide_time_icon">Guide time icon</string>
+    <string name="category_item">Category item</string>
+    <string name="categories">Categories</string>
+    <string name="add_new_instructions">Add a new instruction</string>
+
+    <string name="add_title">Add title</string>
+    <string name="examine_button_text">Examine</string>
+    <string name="add_step">Add step</string>
+    <string name="open_attachment_button_text">OPEN</string>
+
+    <!-- RecordingActivity -->
+    <string name="permissions_required_title">Permissions required</string>
+    <string name="permissions_required_message">Permissions are required for this functionality to work.</string>
+
+    <!-- Create guide -->
+    <string name="say_instruction_title">Name the instruction title</string>
+    <string name="go_next">Next</string>
+
+    <!-- Create guide steps list -->
+    <string name="add_instruction_steps">Add step instructions</string>
+    <string name="confirm_button_text">Confirm</string>
+
+    <!-- Add step -->
+    <string name="add_point">ADD\nPOINT</string>
+    <string name="add_attachments">ADD\nATTACHMENTS</string>
+    <string name="save_button_text">Save</string>
+    <string name="add_step_title">Step</string>
+
+    <!-- Add attachments -->
+    <string name="add_attachments_instruction">To every step you can add <b>video material</b> or <b>photos</b></string>
+    <string name="add_photo">ADD PHOTO</string>
+    <string name="add_video">ADD VIDEO</string>
+
+    <string name="previous_attachment_button_text">PREVIOUS ATTACHMENT</string>
+    <string name="next_attachment_button_text">NEXT ATTACHMENT</string>
+    <string name="zoom_attachment_button_text">ZOOM</string>
+    <string name="select_item_command">"hf_commands:Select item "</string>
+    <string name="play_button_text">"PLAY"</string>
+    <string name="function_available_in_future">"Function available in the future"</string>
+    <string name="alert_title_info">"Info"</string>
+    <string name="settings_title">Settings</string>
+
+    <string name="new_guide_title">GUIDE</string>
+
+    <string name="previous_page_command">hf_commands:Previous page</string>
+    <string name="next_page_command">hf_commands:Next page</string>
+    <string name="image">Image</string>
+
+    <string name="scan_environment">SCAN CODE</string>
+    <string name="scan_qr_description">Please login using QR Code generated on the website</string>
+
+    <!-- Notes -->
+    <string name="select_note_command">"hf_commands:Select note %d"</string>
+
+    <!-- More options -->
+    <string name="more_options">More options</string>
+    <string name="more_options_go_to_work_orders">Go to work orders</string>
+    <string name="more_options_go_to_iconics">Go to ICONICS</string>
+    <string name="more_options_go_to_main_menu">Go to main menu</string>
+    <string name="more_options_close">Close</string>
+
+    <!-- Others -->
+    <string name="navigate_back">Navigate back</string>
+    <string name="work_order">Work Order</string>
+    <string name="status">Status</string>
+    <string name="end_time">End Time</string>
+
+    <string name="set_status_to">Set status to:</string>
+
+    <string name="realwear_no_number" translatable="false">hf_no_number</string>
+    <string name="debug_step_number" translatable="false">1</string>
+    <string name="debug_work_order_title" translatable="false">Compressor 1 Short Cycling or even longer ...</string>
+    <string name="debug_note" translatable="false">This is a test note that can have 2 lines of text. This is a test note that can have. This is a test note that can have 2 lines of text. This is a test note that can have</string>
+    <string name="debug_step" translatable="false">KROK</string>
+    <string name="debug_lorem_20_words" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum, metus nec dignissim condimentum, leo ante consequat lorem, et ultrices.</string>
+    <string name="add_note_uppercase">ADD NOTE</string>
+    <string name="confirm_note">Confirm note</string>
+    <string name="owner">Owner</string>
+    <string name="date">Date</string>
+
+    <string name="show_pdf">Show PDF</string>
+    <string name="show_image">Show image</string>
+    <string name="show_video">Show video</string>
+    <string name="select_note">Select note %d</string>
+    <string name="sort_descending">Descending</string>
+
+    <string name="note_details_title">Note details</string>
+    <string name="date_label">Date:</string>
+    <string name="show_attachment_button_text">Show attachment</string>
+    <string name="select_note_multiple">Select note  %d-%d</string>
+    <string name="attachments">Attachments</string>
+    <string name="summary">Summary</string>
+    <string name="notes">Notes</string>
+    <string name="show_attachment">SHOW ATTACHMENT %d</string>
+    <string name="show_attachment_multiple">SHOW ATTACHMENT %d-%d</string>
+    <string name="add_note_media_information">Only one multimedia attachment can be added to the note.</string>
+    <string name="add_comment">Add comment</string>
+    <string name="add_note">Add note</string>
+    <string name="or">or</string>
+
+    <string name="add_photo_command">hf_commands:Add photo</string>
+    <string name="add_video_command">hf_commands:Add video</string>
+    <string name="add_comment_command">hf_commands:Add comment</string>
+    <string name="confirm_note_command">hf_commands:Confirm note</string>
+    <string name="add_note_command">hf_commands:Add note</string>
+    <string name="show_attachment_command">hf_commands:Show attachment %d</string>
+
+    <string name="reload_command">hf_commands:Reload</string>
+
+    <string name="download_attachment_error">"Error while downloading attachment. Please contact administrator."</string>
+    <string name="change_status_error">"Error while changing status. Please contact administrator."</string>
+    <string name="download_image_error">"Error while downloading image. Please contact administrator."</string>
+    <string name="download_video_error">"Error while downloading video. Please contact administrator."</string>
+    <string name="download_document_error">"Error while downloading document. Please contact administrator."</string>
+
+</resources>

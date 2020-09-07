@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/buttonSummary"
+        style="@style/tab_bar_item_style_button"
+        android:contentDescription="@string/guides_tab_summary_content_description">
+        <ImageView style="@style/tab_bar_image_style"
+            android:src="@drawable/ic_summary" />
+        <TextView style="@style/tab_bar_text_style"
+            android:text="@string/guides_tab_summary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonDetails"
+        style="@style/tab_bar_item_style_button"
+        android:contentDescription="@string/guides_tab_details_content_description">
+        <ImageView style="@style/tab_bar_image_style"
+            android:src="@drawable/ic_summary" />
+        <TextView style="@style/tab_bar_text_style"
+            android:text="@string/guides_tab_details" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonAttachments"
+        style="@style/tab_bar_item_style_button"
+        android:contentDescription="@string/guides_tab_attachments_content_description">
+        <ImageView style="@style/tab_bar_image_style"
+            android:src="@drawable/ic_attachments" />
+        <TextView
+            android:id="@+id/textAttachments"
+            style="@style/tab_bar_text_style"
+            android:text="@string/guides_tab_attachments" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonNotes"
+        style="@style/tab_bar_item_style_button"
+        android:contentDescription="@string/guides_tab_notes_content_description">
+        <ImageView style="@style/tab_bar_image_style"
+            android:src="@drawable/ic_notes" />
+        <TextView
+            android:id="@+id/textNotes"
+            style="@style/tab_bar_text_style"
+            android:text="@string/guides_tab_notes" />
+    </LinearLayout>
+
+</LinearLayout>

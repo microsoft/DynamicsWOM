@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.GuideDetailsFragment"
+    android:background="@drawable/background_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bottomBarHeight">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.ttpsc.dynamics365fieldService.views.components.TopBarView
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="83dp" />
+
+            <Button
+                android:id="@+id/changeStatusButton"
+                style="@style/round_white_button"
+                android:text="@string/change_status"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="50dp" />
+
+        </FrameLayout>
+
+        <com.ttpsc.dynamics365fieldService.views.components.TabBarView
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:stretchColumns="*"
+                >
+
+            </TableLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/pageUpButton"
+                android:layout_width="150dp"
+                style="@style/round_button_left"
+                android:text="@string/page_up"
+                android:enabled="false"
+                android:contentDescription="hf_use_description"
+                />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/pageDownButton"
+                style="@style/round_button_right"
+                android:layout_width="150dp"
+                android:text="@string/page_down"
+                android:enabled="false"
+                android:contentDescription="hf_use_description"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ttpsc.dynamics365fieldService.views.components.BottomBarView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>
+

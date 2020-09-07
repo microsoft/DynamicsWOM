@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".views.MainMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bottomBarHeight">
+
+        <LinearLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:background="@color/top_bar_color"
+            android:orientation="horizontal"
+            android:paddingStart="45dp"
+            android:paddingEnd="45dp" >
+
+            <!--TODO: SET APPLICATION LOGO SOURCE IMAGE-->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/company_logo"
+                android:scaleType="centerInside"
+                android:src="@drawable/top_bar_image"/>
+
+            <TextView
+                style="@style/top_bar_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/title_bar_text"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/userDataTextView"
+                style="@style/top_bar_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="50dp">
+
+                <Button
+                    android:id="@+id/bookingsButton"
+                    style="@style/transparent_button_style_clipped"
+                    android:text="@string/main_menu_bookings_button" />
+
+                <Button
+                    android:id="@+id/openIconicsButton"
+                    style="@style/transparent_button_style_clipped"
+                    android:text="@string/main_menu_open_iconics_button"
+                    android:layout_marginTop="22dp"/>
+
+                <Button
+                    android:id="@+id/openTeamsButton"
+                    style="@style/transparent_button_style_clipped"
+                    android:text="@string/main_menu_open_teams_button"
+                    android:layout_marginTop="22dp" />
+
+                <Button
+                    android:id="@+id/logoutButton"
+                    style="@style/transparent_button_style_clipped"
+                    android:text="@string/main_menu_logout_button"
+                    android:layout_marginTop="22dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="100dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/main_menu_logo_ms"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/main_menu_logo_ttpsc"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_bottom_bar" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="50dp"
+        android:fontFamily=">@font/roboto_light"
+        android:textSize="13sp"
+        />
+
+</FrameLayout>
